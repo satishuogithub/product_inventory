@@ -25,7 +25,7 @@ const initializeDbAndServer = async () => {
 
 initializeDbAndServer();
 
-//Gets list of all Products with a JSON Web Token from data base
+//Retrieves list of products from the database using a JSON Web Token for authentication.
 
 app.get('/Products/', (request, response) => {
   let jwtToken;
@@ -54,7 +54,7 @@ app.get('/Products/', (request, response) => {
   }
 });
 
-//Gets single Product details with a JSON Web Token from data base
+//Gets single Product details from database using JSON Web Token for authentication
 
 app.get('/Products/:ProductId/', (request, response) => {
   let jwtToken;
@@ -141,7 +141,7 @@ app.post('/addProduct/', (request, response) => {
   }
 });
 
-// Update a Product with a JSON Web Token 
+// Updates a Product to database using a JSON Web Token for authenticatin 
 
 app.put('/Products/:ProductId/', (request, response) => {
   let jwtToken;
